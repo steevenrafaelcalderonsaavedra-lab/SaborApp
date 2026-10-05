@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="20dp"
     android:background="@color/naranja_claro">
+
 
     <TextView
         android:layout_width="match_parent"
@@ -15,49 +16,23 @@
         android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="@color/rojo_principal"
-        android:layout_marginBottom="25dp"/>
+        android:layout_marginBottom="15dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/pollo_brasa"
-        android:textSize="18sp"
-        android:padding="15dp"
-        android:background="@android:color/white"
-        android:layout_marginBottom="10dp"/>
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlatos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="1/4 Pollo + Papas       S/ 18.00"
-        android:textSize="18sp"
-        android:padding="15dp"
-        android:background="@android:color/white"
-        android:layout_marginBottom="10dp"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Inca Kola 1L            S/ 10.00"
-        android:textSize="18sp"
-        android:padding="15dp"
-        android:background="@android:color/white"
-        android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Chicha Morada           S/ 8.00"
-        android:textSize="18sp"
-        android:padding="15dp"
-        android:background="@android:color/white"
-        android:layout_marginBottom="30dp"/>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNuevoPlato"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="+ Nuevo Plato"
+        android:layout_height="55dp"
+        android:text="@string/nuevo_plato"
         android:textColor="@color/blanco"
         app:backgroundTint="@color/naranja_principal"/>
+
 
 </LinearLayout>

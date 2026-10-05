@@ -38,6 +38,19 @@
     <string name="mesa3">Mesa 3 - 6 personas - LIBRE</string>
     <string name="mesa4">Mesa 4 - 2 personas - LIBRE</string>
 
+    <string name="registrar_mesa">Registrar Mesa</string>
+    <string name="numero_mesa">Número de mesa</string>
+    <string name="capacidad_mesa">Capacidad de personas</string>
+    <string name="guardar_mesa">Guardar Mesa</string>
+    <string name="nueva_mesa">+ Nueva Mesa</string>
+
+    <string name="estado_libre">LIBRE</string>
+    <string name="estado_ocupada">OCUPADA</string>
+
+    <string name="ingrese_numero_mesa">Ingrese el número de mesa</string>
+    <string name="ingrese_capacidad">Ingrese la capacidad</string>
+    <string name="capacidad_invalida">La capacidad debe ser entre 1 y 12</string>
+
     <!-- PEDIDOS -->
     <string name="gestion_pedidos">Gestión de Pedidos</string>
     <string name="pedido_mesa2">Mesa 2</string>
@@ -54,5 +67,29 @@
     <string name="reporte1">1. 1/4 Pollo + Papas - 15 pedidos</string>
     <string name="reporte2">2. Pollo a la Brasa - 10 pedidos</string>
     <string name="reporte3">3. Inca Kola 1L - 8 pedidos</string>
+
+    <string name="registrar_plato">Registrar Plato</string>
+    <string name="nombre_plato">Nombre del plato</string>
+    <string name="categoria">Categoría</string>
+    <string name="precio">Precio</string>
+    <string name="disponible">Disponible</string>
+    <string name="guardar">Guardar Plato</string>
+    <string name="seleccione_categoria">Seleccione categoría</string>
+    <string name="plato_registrado">Plato registrado correctamente</string>
+    <string name="error_servidor">Error de conexión con el servidor</string>
+    <string-array name="categorias_platos">
+
+        <item>Seleccione categoría</item>
+
+        <item>Entradas</item>
+
+        <item>Fondos</item>
+
+        <item>Bebidas</item>
+
+        <item>Postres</item>
+
+    </string-array>
+
 
 </resources>

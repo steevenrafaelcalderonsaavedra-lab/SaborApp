@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/naranja_claro">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registrar_mesa"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/rojo_principal"
+        android:layout_marginBottom="25dp"/>
+
+
+    <!-- NUMERO MESA -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNumero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/numero_mesa"
+        android:layout_marginBottom="15dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNumero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- CAPACIDAD -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCapacidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/capacidad_mesa"
+        android:layout_marginBottom="25dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCapacidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- ESTADO -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estado inicial"
+        android:textSize="15sp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/estado_libre"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/naranja_principal"
+        android:layout_marginBottom="30dp"/>
+
+
+    <!-- GUARDAR -->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGuardarMesa"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/guardar_mesa"
+        android:textColor="@color/blanco"
+        android:textSize="17sp"
+        app:backgroundTint="@color/naranja_principal"/>
+
+
+</LinearLayout>

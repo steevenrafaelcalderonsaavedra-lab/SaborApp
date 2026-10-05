@@ -7,42 +7,54 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.Toast
 import com.example.saborapp.databinding.ActivityLoginBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import com.example.saborapp.network.LoginResponse
+import com.example.saborapp.network.RetrofitClient
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+        binding =
+            ActivityLoginBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
         binding.btnIngresar.setOnClickListener {
 
-            validarLogin()
-
+            validarCampos()
         }
     }
 
-    private fun validarLogin() {
 
-        val usuario = binding.etUsuario.text.toString().trim()
-        val password = binding.etPassword.text.toString().trim()
+    private fun validarCampos() {
 
-        // Limpiar errores anteriores
+        val usuario =
+            binding.etUsuario.text.toString().trim()
+
+        val clave =
+            binding.etPassword.text.toString().trim()
+
         binding.tilUsuario.error = null
         binding.tilPassword.error = null
 
         var correcto = true
 
-        // CA1: validar campos vacíos
         if (usuario.isEmpty()) {
+
             binding.tilUsuario.error =
                 getString(R.string.campo_obligatorio)
+
             correcto = false
         }
 
-        if (password.isEmpty()) {
+        if (clave.isEmpty()) {
+
             binding.tilPassword.error =
                 getString(R.string.campo_obligatorio)
+
             correcto = false
         }
 
@@ -50,39 +62,84 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
-        // ADMINISTRADOR
-        if (usuario == "admin" && password == "1234") {
-
-            abrirMenu("ADMIN", "Administrador")
-
-        }
-        // MOZO
-        else if (usuario == "mozo" && password == "1234") {
-
-            abrirMenu("MOZO", "Mozo")
-
-        }
-        // CREDENCIALES INCORRECTAS
-        else {
-
-            Toast.makeText(
-                this,
-                "Credenciales incorrectas",
-                Toast.LENGTH_SHORT
-            ).show()
-        }
+        iniciarSesion(usuario, clave)
     }
 
-    private fun abrirMenu(rol: String, nombre: String) {
 
-        val intent = Intent(this, MenuActivity::class.java)
+    private fun iniciarSesion(
+        usuario: String,
+        clave: String
+    ) {
 
+        RetrofitClient.api
+            .login(usuario, clave)
+            .enqueue(object : Callback<LoginResponse> {
+
+                override fun onResponse(
+                    call: Call<LoginResponse>,
+                    response: Response<LoginResponse>
+                ) {
+
+                    if (response.isSuccessful) {
+
+                        val respuesta = response.body()
+
+                        if (respuesta?.success == true) {
+
+                            abrirMenu(
+                                respuesta.usuario ?: "",
+                                respuesta.rol ?: ""
+                            )
+
+                        } else {
+
+                            Toast.makeText(
+                                this@LoginActivity,
+                                respuesta?.mensaje
+                                    ?: "Credenciales incorrectas",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+
+                    } else {
+
+                        Toast.makeText(
+                            this@LoginActivity,
+                            "Error del servidor",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+
+
+                override fun onFailure(
+                    call: Call<LoginResponse>,
+                    t: Throwable
+                ) {
+
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "No se pudo conectar con el servidor",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            })
+    }
+
+
+    private fun abrirMenu(
+        usuario: String,
+        rol: String
+    ) {
+
+        val intent =
+            Intent(this, MenuActivity::class.java)
+
+        intent.putExtra("NOMBRE", usuario)
         intent.putExtra("ROL", rol)
-        intent.putExtra("NOMBRE", nombre)
 
         startActivity(intent)
 
-        // Evita regresar al login con Atrás
         finish()
     }
 }
