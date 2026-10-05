@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/naranja_claro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- NOMBRE APP -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/rojo_principal"
+            android:textSize="32sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitulo_login"
+            android:textAlignment="center"
+            android:textColor="@color/negro"
+            android:textSize="17sp"
+            android:layout_marginBottom="25dp"/>
+
+
+        <!-- INFORMACIÓN USUARIO -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bienvenido"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tvNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/rojo_principal"/>
+
+                <TextView
+                    android:id="@+id/tvRol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_principal"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/negro"
+            android:layout_marginBottom="15dp"/>
+
+
+        <!-- PLATOS -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlatos"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="@string/platos"
+            android:textSize="18sp"
+            android:textColor="@color/blanco"
+            android:layout_marginBottom="12dp"
+            app:backgroundTint="@color/naranja_principal"/>
+
+
+        <!-- MESAS -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMesas"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="@string/mesas"
+            android:textSize="18sp"
+            android:textColor="@color/blanco"
+            android:layout_marginBottom="12dp"
+            app:backgroundTint="@color/naranja_principal"/>
+
+
+        <!-- PEDIDOS -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="@string/pedidos"
+            android:textSize="18sp"
+            android:textColor="@color/blanco"
+            android:layout_marginBottom="12dp"
+            app:backgroundTint="@color/naranja_principal"/>
+
+
+        <!-- REPORTES -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReportes"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="@string/reportes"
+            android:textSize="18sp"
+            android:textColor="@color/blanco"
+            android:layout_marginBottom="30dp"
+            app:backgroundTint="@color/naranja_principal"/>
+
+
+        <!-- SALIR -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSalir"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/salir"
+            android:textColor="@color/blanco"
+            android:textSize="18sp"
+            app:backgroundTint="@color/rojo_principal"/>
+
+    </LinearLayout>
+
+</ScrollView>

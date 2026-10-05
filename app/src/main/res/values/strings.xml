@@ -1,0 +1,58 @@
+<resources>
+    <!-- APP -->
+    <string name="app_name">SaborApp</string>
+    <string name="nombre_negocio">Pollería El Buen Sabor</string>
+
+    <!-- LOGIN -->
+    <string name="titulo_login">Bienvenido a SaborApp</string>
+    <string name="subtitulo_login">Pollería El Buen Sabor</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="campo_obligatorio">Campo obligatorio</string>
+    <string name="credenciales_incorrectas">Credenciales incorrectas</string>
+
+    <!-- MENU -->
+    <string name="bienvenido">Bienvenido</string>
+    <string name="menu_principal">Menú Principal</string>
+    <string name="rol_usuario">Rol: %1$s</string>
+
+    <string name="platos">Platos</string>
+    <string name="mesas">Mesas</string>
+    <string name="pedidos">Pedidos</string>
+    <string name="reportes">Reportes</string>
+    <string name="salir">Salir</string>
+
+    <!-- PLATOS -->
+    <string name="gestion_platos">Gestión de Platos</string>
+    <string name="pollo_brasa">Pollo a la Brasa - S/ 45.00</string>
+    <string name="cuarto_pollo">1/4 Pollo + Papas - S/ 18.00</string>
+    <string name="inca_kola">Inca Kola 1L - S/ 10.00</string>
+    <string name="chicha">Chicha Morada - S/ 8.00</string>
+    <string name="nuevo_plato">+ Nuevo Plato</string>
+
+    <!-- MESAS -->
+    <string name="gestion_mesas">Gestión de Mesas</string>
+    <string name="mesa1">Mesa 1 - 4 personas - LIBRE</string>
+    <string name="mesa2">Mesa 2 - 4 personas - OCUPADA</string>
+    <string name="mesa3">Mesa 3 - 6 personas - LIBRE</string>
+    <string name="mesa4">Mesa 4 - 2 personas - LIBRE</string>
+
+    <!-- PEDIDOS -->
+    <string name="gestion_pedidos">Gestión de Pedidos</string>
+    <string name="pedido_mesa2">Mesa 2</string>
+    <string name="pedido_pollo">1/4 Pollo + Papas x2 - S/ 36.00</string>
+    <string name="pedido_gaseosa">Inca Kola 1L x1 - S/ 10.00</string>
+    <string name="total_pedido">TOTAL: S/ 46.00</string>
+    <string name="agregar_plato">Agregar plato</string>
+
+    <!-- REPORTES -->
+    <string name="reportes_ventas">Reportes de Ventas</string>
+    <string name="venta_dia">VENTA DEL DÍA</string>
+    <string name="venta_ejemplo">S/ 580.00</string>
+    <string name="platos_vendidos">PLATOS MÁS VENDIDOS</string>
+    <string name="reporte1">1. 1/4 Pollo + Papas - 15 pedidos</string>
+    <string name="reporte2">2. Pollo a la Brasa - 10 pedidos</string>
+    <string name="reporte3">3. Inca Kola 1L - 8 pedidos</string>
+
+</resources>

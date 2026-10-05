@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/naranja_claro">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gestion_pedidos"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/rojo_principal"
+        android:layout_marginBottom="25dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mesa 2"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1/4 Pollo + Papas    x2    S/ 36.00"
+        android:textSize="17sp"
+        android:padding="15dp"
+        android:background="@android:color/white"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inca Kola 1L         x1    S/ 10.00"
+        android:textSize="17sp"
+        android:padding="15dp"
+        android:background="@android:color/white"
+        android:layout_marginBottom="25dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TOTAL: S/ 46.00"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/rojo_principal"
+        android:layout_marginBottom="25dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar plato"
+        android:textColor="@color/blanco"
+        app:backgroundTint="@color/naranja_principal"/>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/naranja_claro">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gestion_mesas"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/rojo_principal"
+        android:layout_marginBottom="25dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mesa1"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mesa 2 - 4 personas - OCUPADA"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mesa 3 - 6 personas - LIBRE"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mesa 4 - 2 personas - LIBRE"/>
+
+</LinearLayout>
